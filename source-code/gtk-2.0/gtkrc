@@ -1,0 +1,152 @@
+gtk-color-scheme = "bg_color:#ffffd3;fg_color:#604000;base_color:#ffffff;text_color:#1d1300;selected_bg_color:#228b22;selected_fg_color:#ffffff;tooltip_bg_color:#1d1300;tooltip_fg_color:#ffffff"
+
+style "default" {
+	# theme engine
+	engine "murrine" {
+		focus_color = "#ae822a"
+		roundness = 6
+		trough_shades = { 0.8, 1.0 }
+		trough_border_shades = { 0.9, 0.9 }
+	}
+	
+	# padding
+	xthickness = 3
+	ythickness = 3
+	
+	# Color scheme
+	bg[NORMAL] = @bg_color
+	fg[NORMAL] = @fg_color
+	base[NORMAL] = @base_color
+	text[NORMAL] = @text_color
+	
+	bg[INSENSITIVE] = "#dbdb9b"
+	fg[INSENSITIVE] = shade(0.33, @bg_color)
+	base[INSENSITIVE] = "#dbdb9b"
+	text[INSENSITIVE] = shade(0.33, @bg_color)
+	
+	bg[PRELIGHT] = "#ae822a"
+	fg[PRELIGHT] = "#000000"
+	base[PRELIGHT] = "#ae822a"
+	text[PRELIGHT] = "#000000"
+	
+	bg[SELECTED] = @selected_bg_color
+	fg[SELECTED] = @selected_fg_color
+	base[SELECTED] = @selected_bg_color
+	text[SELECTED] = @selected_fg_color
+	
+	bg[ACTIVE] = "#ffffff"
+	fg[ACTIVE] = @text_color
+	base[ACTIVE] = "#68c468"
+	text[ACTIVE] = @text_color
+	
+	#Font
+	font_name = "DejaVu Sans Condensed 10"
+	
+	#Theme wide style properties
+	GtkWidget::link-color = "#228b22"
+	GtkWidget::visited-link-color = "#ae822a"
+}
+
+style "button" {
+	bg[NORMAL] = mix(0.25, "#ffffff", "#ae822a")
+	fg[NORMAL] = @text_color
+	bg[ACTIVE] = "#ae822a"
+	
+	fg[PRELIGHT] = "#000000"
+}
+
+style "toolbar-button" {
+	bg[PRELIGHT] = mix(0.25, "#ffffff", "#ae822a")
+}
+
+style "combobox-button-label" {
+	text[NORMAL] = @text_color
+}
+
+style "entry" {
+	engine "murrine" {
+		gradient_shades = { 0.8, 0.8, 0.8, 0.8 }
+	}
+}
+
+style "notebook" {
+	bg[NORMAL] = "#ffffff"
+	bg[ACTIVE] = mix(0.25, "#ffffff", "#ae822a")
+}
+
+style "notebook-label" {
+	#Font
+	font_name = "DejaVu Serif Condensed Bold"
+}
+
+style "menubar" {
+	fg[PRELIGHT] = @selected_fg_color
+
+	font_name = "DejaVu Serif Condensed Bold"
+	
+	engine "murrine" {
+		roundness = 0
+	}
+}
+
+style "menu" {
+	xthickness = 0
+	ythickness = 0
+	
+	bg[NORMAL] = "#ffffff"
+}
+
+style "menuitem" {
+	xthickness = 3
+	ythickness = 3
+
+	fg[PRELIGHT] = @selected_fg_color
+	fg[INSENSITIVE] = "#c0c0c0"
+	
+	engine "murrine" {
+		roundness = 0
+	}
+}
+
+style "treeview" {
+	font_name = "DejaVu Sans Condensed"
+}
+
+style "treeview-header" {
+	font_name = "DejaVu Serif Condensed Bold"
+	
+	bg[NORMAL] = mix(0.25, "#ffffff", "#ae822a")
+	fg[NORMAL] = @text_color
+}
+
+style "progress-bar" = "default" {
+	xthickness = 0
+	ythickness = 0
+	
+	bg[NORMAL] = "#ffffff"
+	bg[SELECTED] = "#68c468"
+	fg[PRELIGHT] = @text_color
+}
+
+style "tooltips" {
+	bg[NORMAL] = @tooltip_bg_color
+	fg[NORMAL] = @tooltip_fg_color
+}
+
+# apply styles to all widgets
+class "GtkWidget" style "default"
+widget "gtk-tooltip*" style "tooltips"
+
+widget_class "*<GtkButton>*" style "button"
+widget_class "*<GtkToolbar>.*.<GtkButton>*" style "toolbar-button"
+widget_class "*.<GtkComboBox>*<GtkCellView>" style "combobox-button-label"
+widget_class "*.<GtkComboboxEntry>.<GtkToggleButton>" style "combobox-button-label"
+widget_class "*<GtkEntry>*" style "entry"
+widget_class "*<GtkNotebook>*" style "notebook"
+widget_class "*<GtkNotebook>.<GtkLabel>" style "notebook-label"
+widget_class "*<GtkMenuBar>*" style "menubar"
+widget_class "*<GtkMenu>*" style "menu"
+widget_class "*<GtkMenuItem>*" style "menuitem"
+widget_class "*.<GtkTreeView>*" style "treeview"
+widget_class "*.<GtkTreeView>.<GtkButton>*" style "treeview-header"
+widget_class "*<GtkProgress>" style "progress-bar"
