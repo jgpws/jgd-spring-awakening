@@ -1,0 +1,670 @@
+/* Widgets */
+* {
+	engine: none;
+	background-clip: padding-box;
+	
+	-GtkButton-child-displacement-x: 0;
+	-GtkButton-child-displacement-y: 0;
+	-GtkButton-default-border: 2;
+	-GtkButton-image-spacing: 0;
+	-GtkButton-interior-focus: true;
+	-GtkCheckButton-indicator-size: 16;
+	-GtkCheckMenuItem-indicator-size: 12;
+	-GtkEntry-inner-border: 1;
+	-GtkEntry-progress-border: 0;
+	-GtkExpander-expander-size: 12;
+	-GtkHTML-link-color: @link_color;
+	-GtkIMHtml-hyperlink-color: @link_color;
+	-GtkMenu-horizontal-padding: 0;
+	-GtkMenu-vertical-padding: 0;
+	-GtkMenuBar-internal-padding: 0;
+	-GtkMenuItem-arrow-scaling: 0.4;
+	-GtkNotebook-initial-gap: 0;
+	-GtkNotebook-tab-overlap: 1;
+	-GtkPaned-handle-size: 6;
+	-GtkProgressBar-min-horizontal-bar-height: 20;
+	-GtkProgressBar-min-vertical-bar-width: 20;
+	-GtkRange-slider-width: 9;
+	-GtkRange-stepper-size: 0;
+	-GtkRange-stepper-spacing: 0;
+	-GtkRange-trough-border: 3;
+	-GtkRange-trough-under-steppers: 1;
+	-GtkScale-trough-border: 1;
+	-GtkScrollbar-activate-slider: 1;
+	-GtkScrollbar-trough-border: 1;
+	-GtkScrollbar-slider-width: 20;
+	-GtkScrollbar-min-slider-length: 50;
+	-GtkScrolledWindow-scrollbar-spacing: 0;
+	-GtkScrolledWindow-scrollbars-within-bevel: 1;
+	-GtkSeparatorMenuItem-horizontal-padding: 0;
+	-GtkStatusbar-shadow-type: none;
+	-GtkTextView-error-underline-color: @error_color;
+	-GtkToolButton-icon-spacing: 6;
+	-GtkToolItemGroup-expander-size: 11;
+	-GtkToolbar-internal-padding: 0;
+	-GtkTreeView-expander-size: 11;
+	-GtkTreeView-vertical-separator: 1;
+	-GtkWidget-wide-separators: true;
+	-GtkWidget-separator-width: 2;
+	-GtkWidget-separator-height: 2;
+	-GtkWidget-focus-padding: 2;
+	-GtkWidget-focus-line-width: 0;
+	-GtkWidget-link-color: @link_color;
+	-GtkWidget-visited-link-color: @link_color;
+	-GtkWindow-resize-grip-width: 0;
+	-GtkWindow-resize-grip-height: 0;
+	-WnckTasklist-fade-overlay-rect: 0;
+}
+
+.default {
+	background-color: @theme_bg_color;
+	color: @theme_fg_color;
+	padding: 3px;
+	border-radius: 6px;
+}
+
+/* Shared CSS rules */
+.button,
+.entry,
+.menu,
+.notebook,
+.slider,
+.trough {
+	border-width: 1px;
+	border-color: @border_color;
+	color: @theme_fg_color;
+	padding: 3px;
+}
+
+.button,
+.entry,
+.notebook,
+.slider,
+.trough {
+	border-radius: 6px;
+}
+
+.button {
+	border-style: outset;
+}
+
+.entry,
+.trough,
+GtkSwitch.trough {
+	border-style: inset;
+}
+
+.menu,
+.notebook,
+.frame,
+.slider {
+	border-style: solid;
+}
+
+GtkPaned,
+GtkFrame,
+.separator {
+	border: 1px solid;
+	border-color: @border_color_light;
+}
+
+.button:insensitive,
+.entry:insensitive,
+GtkSwitch.trough:insensitive {
+	background-color: #dbdb9b;
+}
+
+.button,
+.menubar:active,
+.menuitem:hover,
+.notebook tab.top,
+.notebook tab.bottom,
+GtkTreeView row:selected,
+GtkTreeView row:hover,
+GtkSwitch.slider:active,
+.scrollbar.slider.horizontal,
+GtkProgressBar,
+.progressbar.horizontal {
+	background-image: -gtk-gradient(linear, left top, left bottom, 
+		from(rgba(0,0,0,0)),
+		color-stop (0.5, rgba(0,0,0,0)),
+		color-stop (0.5, rgba(0,0,0,0.10)),
+		to( rgba(0,0,0,0.05)));
+}
+
+.notebook tab.left,
+.notebook tab.right,
+.scrollbar.slider.vertical,
+GtkProgressBar.vertical,
+.progressbar.vertical {
+	background-image: -gtk-gradient(linear, left top, right top, 
+		from(rgba(0,0,0,0)),
+		color-stop (0.5, rgba(0,0,0,0)),
+		color-stop (0.5, rgba(0,0,0,0.10)),
+		to( rgba(0,0,0,0.05)));
+}
+
+.entry,
+.notebook,
+GtkTextView {
+	background-color: @theme_base_color;
+	color: @theme_text_color;
+	border-color: rgba(0, 0, 0, 0.25);
+}
+
+.entry:insensitive,
+GtkLabel:insensitive,
+.notebook GtkLabel:insensitive,
+GtkScrolledWindow:insensitive {
+	color: @button_disabled_fg_color;
+}
+/* */
+
+/* Windows and Frames */
+GtkWindow {
+	background-color: @theme_bg_color;
+	color: @theme_fg_color;
+}
+
+GtkPaned {
+    background-color: @theme_bg_color;
+}
+
+GtkScrolledWindow,
+.sidebar {
+	border: 1px solid @primary_color;
+}
+/* */
+
+/* Buttons, Checkboxes, Radio Buttons */
+.button,
+GtkComboBoxText {
+	background-color: @button_bg_color;
+	color: @theme_text_color;
+}
+
+.button {
+	-GtkWidget-focus-line-width: 0;
+}
+
+.button:active {
+	background-color: @primary_color;
+	color: #000000;
+}
+
+.button:hover {
+	background-color: @primary_color;
+	color: #000000;
+}
+
+.button:focus,
+.button:active:focus {
+	border: 2px solid @focus_color_dark;
+}
+
+.menuitem .text-button:hover {
+	background-image: none;
+}
+
+GtkCheckButton:hover {
+	color: @theme_text_color;
+}
+
+.check,
+.check:insensitive,
+.check:active,
+.check:selected,
+.radio,
+.radio:insensitive,
+.radio:active,
+.radio:selected {
+	background-color: transparent;
+}
+
+.check:insensitive,
+.radio:insensitive {
+	background-color: transparent;
+	color: @button_disabled_fg_color;
+}
+
+.check:focus,
+.radio:focus {
+	border-width: 0;
+}
+
+/*GtkCheckButton.text-button {
+	background-color: transparent;
+}*/
+
+GtkCheckButton:hover,
+GtkCheckButton:active:hover {
+	background-color: transparent;
+}
+
+GtkToolButton .button:hover,
+.view .button,
+.linked .button {
+	background-color: @button_light_color;
+}
+
+GtkToolButton .button:hover {
+	border-color: rgba(0, 0, 0, 0.25);
+}
+
+.header-bar .button {
+	background-color: @button_light_color;
+}
+
+GtkToolButton .button,
+.header-bar .button {
+	border-radius: 3px;
+}
+
+.header-bar .button:hover,
+.linked .button:hover,
+.linked .button:active {
+	background-color: @primary_color;
+}
+
+.spinbutton {
+	padding: 3px 6px;
+}
+
+.spinbutton .button,
+.spinbutton.vertical.entry {
+	border-radius: 3px;
+}
+
+GtkLinkButton.text-button:hover,
+GtkMenuButton.button:hover,
+GtkScaleButton.button:hover {
+	background-color: @button_light_color;
+}
+
+GtkRevealer .button {
+	background-color: @primary_color_faded;
+}
+/* */
+
+/* Text entries */
+.entry:focus,
+GtkSwitch:focus {
+	border: 2px solid @focus_color;
+}
+
+/* Notebook and Tabs */
+.notebook {
+	background-clip: border-box;
+	margin: 3px;
+}
+
+.notebook GtkLabel {
+	font-family: serif;
+	font-weight: bold;
+	color: @theme_text_color;
+}
+
+.notebook:active {
+	background-color: @primary_color;
+}
+
+.notebook tab {
+	background-color: @button_light_color;
+	padding: 3px 6px;
+}
+
+.notebook tab:active {
+	background-color:	@theme_base_color;
+	background-image: none;
+	color: @theme_fg_color;
+}
+
+.notebook tab.top:focus {
+	border-top-color: @focus_color;
+	border-top-width: 2px;
+}
+
+.notebook tab.top:active,
+.notebook tab.bottom:active {
+	padding: 5px 6px;
+}
+
+.notebook tab.bottom:focus {
+	border-bottom-color: @focus_color;
+	border-bottom-width: 2px;
+}
+
+.notebook tab.left:focus {
+	border-left-color: @focus_color;
+	border-left-width: 2px;
+}
+
+.notebook tab.right:focus {
+	border-right-color: @focus_color;
+	border-right-width: 2px;
+}
+
+.notebook tab.left:active {
+	padding: 3px 0 3px 11px;
+}
+
+.notebook tab.right:active {
+	padding: 3px 11px 3px 0;
+}
+
+.notebook tab .button:hover {
+	background-color: @button_light_color;
+}
+/* */
+
+/* Menus and Toolbars */
+.menubar {
+	padding: 3px;
+	font-family: serif;
+	font-weight: bold;
+}
+
+.menubar > .menuitem {
+	padding: 3px 6px;
+}
+
+.menu {
+	background-color: @theme_base_color;
+	border-radius: 0;
+	font-family: sans-serif;
+	font-weight: normal;
+	padding: 0;
+}
+
+.menuitem {
+	padding: 3px;
+}
+
+.menubar:hover,
+.menuitem:hover {
+	background-color: @theme_selected_bg_color;
+	color: @theme_selected_fg_color;
+}
+
+.menuitem.check,
+.menuitem.radio {
+	/*color: @theme_selected_fg_color;*/
+}
+
+.menuitem.check:hover,
+.menuitem.radio:hover {
+	/*background-image: none;*/
+	/*border-color: #ffffff;*/
+}
+
+.menu:insensitive,
+.menubar:insensitive,
+.menuitem:insensitive {
+	color: #c0c0c0;
+}
+
+.toolbar,
+.header-bar {
+	padding: 3px 6px;
+}
+
+.menubar,
+.toolbar {
+	border-bottom: 1px solid;
+	border-bottom-color: @border_color_light;
+}
+
+.header-bar {
+	background-image: -gtk-gradient(linear, left top, left bottom, 
+		from(#228b22),
+		to(#f5f582));
+	color: #ffffff;
+	border-bottom: 2px solid;
+	border-color: #228b22;
+	font: serif;
+	font-weight: bold;
+}
+
+.header-bar .title {
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+}
+
+.header-bar .button:insensitive {
+	border-color: @border_color_light;
+}
+
+.header-bar:backdrop {
+	background-image: -gtk-gradient(linear, left top, left bottom, 
+		from(#ae822a),
+		to(#f5ce82));;
+}
+/* */
+
+/* Views */
+.view {
+	background-color: @theme_base_color;
+}
+
+.view:hover {
+	background-color: @secondary_color;
+	color: #000000;
+}
+
+.view .button {
+	border-color: @primary_color_faded;
+}
+
+GtkTreeView .menu:insensitive {
+	color: #c0c0c0;
+}
+
+GtkTreeView row:nth-child(odd) {
+	background-color: rgba(0, 0, 0, 0.06);
+}
+
+.view:selected,
+.view row:focus {
+	background-color: @theme_selected_bg_color;
+}
+
+.view.radio:active,
+.view.radio:hover {
+	background-image: none;
+	/*border-color: @theme_selected_fg_color;*/
+	color: @theme_selected_fg_color;
+}
+
+column-header.button,
+column-header .button {
+	color: @theme_text_color;
+	border-color: @theme_fg_color;
+	border-radius: 0;
+	font-family: serif;
+	font-weight: bold;
+}
+
+.view .button:focus,
+.view .button:selected {
+	background-image: none;
+	background-color: @primary_color;
+}
+/* */
+
+/* Scales and Scrollbars */
+.trough:focus {
+	/*border: 1px solid @primary_color;*/
+	border: 1px solid @primary_color;
+}
+
+.trough {
+	background-image: -gtk-gradient (linear, left top, left bottom, from(rgba(0,0,0,0.25)), to(rgba(0,0,0,0)));
+	background-color: @theme_base_color;
+}
+
+.trough.vertical {
+	background-image: -gtk-gradient (linear, left top, right top, from(rgba(0,0,0,0.25)), to(rgba(0,0,0,0)));
+}
+
+.scale.trough {
+	margin: 5px 0 5px 0;
+}
+
+.scale.trough.vertical {
+    margin: 0 5px 0 5px;
+}
+
+.scale.highlight.left,
+.scale.highlight.bottom {
+	background-color: @secondary_color_faded;
+}
+
+GtkLevelBar {
+    -GtkLevelBar-min-block-width: 34;
+    -GtkLevelBar-min-block-height: 3;
+}
+
+GtkLevelBar.vertical {
+    -GtkLevelBar-min-block-width: 3;
+    -GtkLevelBar-min-block-height: 34;
+}
+
+.level-bar.trough {
+    padding: 2px;
+}
+
+.level-bar.fill-block {
+	background-color: @primary_color;
+	border-color: @border_color_light;
+}
+
+.level-bar.fill-block.level-high {
+	background-color: @theme_selected_bg_color;
+}
+
+.level-bar.fill-block.level-low {
+	background-color: alpha (@theme_selected_bg_color, 0.5);
+}
+
+.level-bar.indicator-discrete.fill-block.horizontal {
+    margin: 0 1px;
+}
+
+.level-bar.indicator-discrete.fill-block.vertical {
+    margin: 1px 0;
+}
+
+.level-bar.fill-block.empty-fill-block {
+	background-color: transparent;
+}
+
+.progressbar {
+	background-color: @secondary_color_faded;
+	border-radius: 6px;
+	border: 1px solid;
+	border-color: @border_color;
+	color: @theme_text_color;
+}
+
+.scrollbar {
+	border-radius: 0;
+	-GtkRange-slider-width: 16;
+	-GtkRange-trough-border: 0;
+}
+
+.scrollbar.slider {
+	background-color: @theme_selected_bg_color;
+	border: 1px solid;
+	border-color: @border_color;
+	border-radius: 8px;
+}
+
+.scrollbar.button {
+	background-color: @theme_base_color;
+	color: @border_color;
+	border-color: @border_color;
+}
+
+.scrollbar.button:active,
+.scrollbar.button:hover {
+	background-color: @secondary_color_faded;
+}
+
+.slider {
+	background-color: @theme_base_color;
+	border-color: rgba(0, 0, 0, 0.25);
+}
+/* */
+
+/* Miscellaneous */
+.tooltip {
+	background-color: @theme_tooltip_bg_color;
+	color: @theme_tooltip_fg_color;
+}
+
+GtkComboBox .separator,
+.button .separator,
+.button.separator {
+	border: 1px solid;
+	border-color: rgba(0, 0, 0, 0.25);
+}
+
+.pane-separator {
+	border-color: transparent;
+}
+
+GtkSwitch.trough:insensitive {
+	color: @button_disabled_fg_color;
+}
+
+GtkSwitch.trough {
+	color: @theme_text_color;
+}
+
+GtkSwitch:active {
+	font-weight: bold;
+}
+
+GtkSwitch.slider:active {
+	background-color: @theme_selected_bg_color;
+}
+
+GtkRevealer {
+	background-color: @theme_tooltip_bg_color;
+}
+
+GtkRevealer GtkLabel {
+	color: @theme_tooltip_fg_color;
+}
+/* */
+
+/* Applications */
+NautilusToolbar.header-bar {
+	background-image: none;
+	background-color: @theme_bg_color;
+}
+/* */
+
+/* Default widget states */
+*:active {
+	background-color: @theme_base_color;
+	color: @theme_text_color;
+}
+
+*:insensitive,
+.button:insensitive {
+	color: @button_disabled_fg_color;
+	border-color: @border_disabled_color;
+}
+
+*:selected,
+*:selected:focus {
+	background-color: @theme_selected_bg_color;
+	color: @theme_selected_fg_color;
+}
+
+*:focus {
+	/*outline-style: solid;
+	outline-color: @primary_color;
+	outline-width: 1px;*/
+}
+/* */

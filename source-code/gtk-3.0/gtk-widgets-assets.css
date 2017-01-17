@@ -1,0 +1,185 @@
+/* JGD-Spring Awakening- GTK+3.10 version */
+
+/* Default states */
+.check,
+.view.check {
+	background-image: url("assets/check-unselected.png");
+}
+
+.check:inconsistent {
+	background-image: url("assets/check-mixed.png");
+}
+
+.menuitem.check {
+	background-image: url("assets/check-menuitem-unselected.png");
+}
+
+.radio,
+.view.radio {
+	background-image: url("assets/radio-unselected.png");
+}
+
+.menuitem.radio {
+	background-image: url("assets/radio-menuitem-unselected.png");
+}
+
+/* Disabled */
+.check:insensitive {
+	background-image: url("assets/check-unselected-disabled.png");
+}
+
+.check:inconsistent:insensitive {
+    background-image: url("assets/check-mixed-disabled.png");
+}
+
+.check:active:insensitive {
+	background-image: url("assets/check-selected-disabled.png");
+}
+
+.menuitem.check:insensitive {
+	background-image: url("assets/check-menuitem-unselected-disabled.png");
+}
+
+.menuitem.check:active:insensitive {
+	background-image: url("assets/check-menuitem-disabled.png");
+}
+
+.menuitem.check:inconsistent:insensitive {
+	background-image: url("assets/check-menuitem-mixed-disabled.png");
+}
+
+.radio:insensitive {
+	background-image: url("assets/radio-unselected-disabled.png");
+}
+
+.radio:inconsistent:insensitive {
+	background-image: url("assets/radio-mixed-disabled.png");
+}
+
+.radio:active:insensitive {
+	background-image: url("assets/radio-selected-disabled.png");
+}
+
+.menuitem.radio:insensitive {
+	background-image: url("assets/radio-menuitem-unselected-disabled.png");
+}
+
+.menuitem.radio:inconsistent:insensitive {
+	background-image: url("assets/radio-menuitem-mixed-disabled.png");
+}
+
+.menuitem.radio:active:insensitive {
+	background-image: url("assets/radio-menuitem-selected-disabled.png");
+}
+
+/* Active/Selected */
+.check:active,
+.check:selected {
+	background-image: url("assets/check-selected.png");
+}
+
+.menuitem.check:active,
+.menuitem.check:selected {
+	background-image: url("assets/check-menuitem-selected.png");
+}
+
+.radio:active,
+.radio:selected {
+	background-image: url("assets/radio-selected.png");
+}
+
+.menuitem.radio:active,
+.menuitem.radio:selected {
+	background-image: url("assets/radio-menuitem-selected.png");
+}
+
+.menuitem.radio:inconsistent:active {
+	background-image: url("assets/check-menuitem-mixed-selected.png");
+}
+
+/* Hover */
+.check:hover {
+	background-image: url("assets/check-unselected-hover.png");
+}
+
+.check:inconsistent:hover {
+    background-image: url("assets/check-mixed-hover.png");
+}
+
+.check:active:hover {
+	background-image: url("assets/check-selected-hover.png");
+}
+
+.menuitem.check:hover {
+	background-image: url("assets/check-menuitem-unselected-hover.png");
+}
+
+.menuitem.check:active:hover {
+	background-image: url("assets/check-menuitem-selected-hover.png");
+}
+
+.view.check:hover {
+	background-image: url("assets/check-view-unselected-hover.png");
+}
+
+.view.check:active:hover {
+	background-image: url("assets/check-view-selected-hover.png");
+}
+
+.radio:inconsistent:hover {
+	background-image: url("assets/radio-mixed-hover.png");
+	background-repeat: no-repeat;
+}
+
+.radio:hover {
+	background-image: url("assets/radio-unselected-hover.png");
+	background-repeat: no-repeat;
+}
+
+.radio:active:hover {
+	background-image: url("assets/radio-selected-hover.png");
+	background-repeat: no-repeat;
+}
+
+.menuitem.radio:hover {
+	background-image: url("assets/radio-menuitem-unselected-hover.png");
+}
+
+.menuitem.radio:active:hover {
+	background-image: url("assets/radio-menuitem-selected-hover.png");
+}
+
+.view.radio:hover {
+	background-image: url("assets/radio-view-unselected-hover.png");
+	background-repeat: no-repeat;
+}
+
+.view.radio:active:hover {
+	background-image: url("assets/radio-view-selected-hover.png");
+	background-repeat: no-repeat;
+}
+
+/* Focus */
+.check:focus {
+	background-image: url("assets/check-unselected-focus.png");
+}
+
+.check:active:focus {
+	background-image: url("assets/check-selected-focus.png");
+}
+
+.check:inconsistent:focus {
+	background-image: url("assets/check-mixed-focus.png");
+}
+
+.radio:focus {
+	background-image: url("assets/radio-unselected-focus.png");
+}
+
+.radio:active:focus {
+	background-image: url("assets/radio-selected-focus.png");
+}
+
+.radio:inconsistent:focus {
+	background-image: url("assets/radio-mixed-focus.png")
+}
