@@ -1,11 +1,12 @@
 # jgd-spring-awakening
-JGD-Spring Awakening theme collection.
 
 JGD-Spring Awakening is a collection of themes for the Linux desktop. Featuring a fresh and friendly design, each theme's main color scheme is a pastel yellow and bright green.
 
 Included in this theme package are Openbox, GTK+2 and GTK+3 (currently version 3.10 only) themes.
 
-**How to install this theme collection:**
+The GTK+2 version requires the Murrine engine. Instructions on how to install Murrine are below.
+
+## How to install this theme collection:
 
 1. Download the file from the [Downloads] (https://github.com/jgpws/jgd-spring-awakening/blob/master/downloads/JGD-SpringAwakening-01-17-17.tar.gz) directory
 2. Open a Terminal application
@@ -26,7 +27,17 @@ or to install globally
 
 If you prefer using a GUI for these purposes, as it is easier, do so. To install to usr/share/themes, run your file manager as sudo from the command line (for example: **gksudo pcmanfm**).
 
-*Note: This theme has been tested so far only in a Gnome version 3.10 environment on Ubuntu LTS 14.04. Because of the nature of GTK theming, it is not guaranteed to render correctly in other versions.
+## How to install Murrine for GTK+2:
+
+### Theme Engines installation for Ubuntu:**
+
+In the **Ubuntu Software Center**, search for **Murrine**. Then you can select **Cairo-based gtk+-2.0 theme engine**, which has the package name gtk-engines-murrine.
+
+### Theme Engines installation for Arch Linux:
+
+**sudo pacman -S gtk-engines**
+
+*Note: The GTK+3 theme has been tested so far only in a Gnome version 3.10 environment on Ubuntu LTS 14.04. Because of the nature of GTK theming, it is not guaranteed to render correctly in other versions.
 
 To switch themes, you can use your desktop environment's theme switcher.
 
