@@ -8,7 +8,7 @@ The GTK+2 version requires the Murrine engine. Instructions on how to install Mu
 
 ## How to install this theme collection:
 
-1. Download the file from the [Downloads] (https://github.com/jgpws/jgd-spring-awakening/blob/master/downloads/JGD-SpringAwakening-01-17-17.tar.gz) directory
+1. Download the file from the [Downloads] (https://github.com/jgpws/jgd-spring-awakening/blob/master/downloads/) directory
 2. Open a Terminal application
 3. Navigate to your Downloads folder in the terminal (usually titled Downloads). Type **cd Downloads**
 4. Type **ls** and look for **JGD-SpringAwakening-month-day-year.tar.gz**, where month, day and year represent when the file was last updated
@@ -29,7 +29,7 @@ If you prefer using a GUI for these purposes, as it is easier, do so. To install
 
 ## How to install Murrine for GTK+2:
 
-### Theme Engines installation for Ubuntu:**
+### Theme Engines installation for Ubuntu:
 
 In the **Ubuntu Software Center**, search for **Murrine**. Then you can select **Cairo-based gtk+-2.0 theme engine**, which has the package name gtk-engines-murrine.
 
