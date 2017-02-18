@@ -10,22 +10,22 @@ The GTK+2 version requires the Murrine engine. Instructions on how to install Mu
 
 1. Download the file from the [Downloads] (https://github.com/jgpws/jgd-spring-awakening/blob/master/downloads/) directory
 2. Open a Terminal application
-3. Navigate to your Downloads folder in the terminal (usually titled Downloads). Type **cd Downloads**
-4. Type **ls** and look for **JGD-SpringAwakening-month-day-year.tar.gz**, where month, day and year represent when the file was last updated
-5. Untar the file by typing **tar -zxvf JGD-SpringAwakening-01-01-17.tar.gz**, substituting the current version's date numbers
-6. type **cd** again to get to your home folder; type **ls -a** and see if there is a **.themes** directory
-7. If one does not exist, create one: **mkdir .themes**
-8. **cd Downloads/JGD-SpringAwakening-month-day-year**
-9. **cp JGD-SpringAwakening ../../.themes**
+3. Navigate to your Downloads folder in the terminal (usually titled Downloads). Type `cd Downloads`
+4. Type `ls` and look for **JGD-SpringAwakening-month-day-year.tar.gz**, where month, day and year represent when the file was last updated
+5. Untar the file by typing `tar -zxvf JGD-SpringAwakening-01-01-17.tar.gz`, substituting the current version's date numbers
+6. type `cd` again to get to your home folder; type `ls -a` and see if there is a **.themes** directory
+7. If one does not exist, create one: `mkdir .themes`
+8. `cd Downloads`
+9. `cp JGD-SpringAwakening ../.themes`
 
 or to install globally
 
-1. **cd /usr/share/themes**
-2. **sudo cp ~/Downloads/JGD-SpringAwakening-month-day-year/JGD-SpringAwakening /usr/share/themes**
+1. `cd /usr/share/themes`
+2. `sudo cp ~/Downloads/JGD-SpringAwakening /usr/share/themes`
 3. Enter sudo password
-4. **ls** to check that the theme folder is present
+4. `ls` to check that the theme folder is present
 
-If you prefer using a GUI for these purposes, as it is easier, do so. To install to usr/share/themes, run your file manager as sudo from the command line (for example: **gksudo pcmanfm**).
+If you prefer using a GUI for these purposes, as it is easier, do so. To install to usr/share/themes, run your file manager as sudo from the command line (for example: `gksudo pcmanfm`).
 
 ## How to install Murrine for GTK+2:
 
@@ -35,7 +35,7 @@ In the **Ubuntu Software Center**, search for **Murrine**. Then you can select *
 
 ### Theme Engines installation for Arch Linux:
 
-**sudo pacman -S gtk-engines**
+`sudo pacman -S gtk-engines`
 
 *Note: The GTK+3 theme has been tested so far only in a Gnome version 3.10 environment on Ubuntu LTS 14.04. Because of the nature of GTK theming, it is not guaranteed to render correctly in other versions.
 
