@@ -928,14 +928,6 @@ treeview menu:disabled {
 	color: @silver;
 }
 
-/*treeview row:nth-child(odd) {
-	background-color: rgba(0, 0, 0, 0.06);
-}*/
-
-row.odd {
-	background-color: rgba(0, 0, 0, 0.06);
-}
-
 row {
 	padding: 3px 6px;
 }
