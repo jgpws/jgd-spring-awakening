@@ -191,8 +191,20 @@ window.solid-csd:backdrop > decoration {
 	border-top-color: #cca14b;
 }
 
-dialog.csd decoration {
+dialog.csd > decoration,
+dialog.csd > decoration + headerbar,
+window.csd > decoration,
+window.csd > decoration + headerbar {
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+}
+
+dialog.csd decoration,
+window.csd decoration {
 	box-shadow: 6px 6px 6px 3px rgba(0, 0, 0, 0.33);
+}
+
+dialog.csd decoration {
 	border: 1px solid @theme_selected_bg_color;
 }
 
@@ -201,9 +213,12 @@ dialog.csd:backdrop decoration {
 }
 
 .popup decoration, /* For right-click menus */
+.csd.popup decoration,
 combobox window decoration,
 menuitem window decoration,
+menuitem window.csd decoration,
 scrolledwindow window decoration,
+scrolledwindow window.csd decoration,
 treeview window decoration,
 popover {
 	box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.33);
@@ -926,6 +941,14 @@ treeview.view {
 
 treeview menu:disabled {
 	color: @silver;
+}
+
+/*treeview row:nth-child(odd) {
+	background-color: rgba(0, 0, 0, 0.06);
+}*/
+
+row.odd {
+	background-color: rgba(0, 0, 0, 0.06);
 }
 
 row {
