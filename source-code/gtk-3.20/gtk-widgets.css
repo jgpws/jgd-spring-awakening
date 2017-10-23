@@ -282,6 +282,14 @@ scrolledwindow {
 	background-color: transparent;
 }
 
+#pathbarbox .path-bar image {
+	margin: 0px 3px;
+}
+
+#pathbarbox .path-bar label {
+	margin: 0px 6px;
+}
+
 notebook scrolledwindow {
 	margin: 0px;
 }
