@@ -2,7 +2,7 @@
 
 JGD-Spring Awakening is a collection of themes for the Linux desktop. Featuring a fresh and friendly design, each theme's main color scheme is a pastel yellow and bright green.
 
-Included in this theme package are Openbox, GTK+2 and GTK+3 (currently version 3.10 only) themes.
+Included in this theme package are Openbox, GTK+2 and GTK+3 (versions 3.10 and 3.20 only) themes.
 
 The GTK+2 version requires the Murrine engine. Instructions on how to install Murrine are below.
 
@@ -11,7 +11,7 @@ The GTK+2 version requires the Murrine engine. Instructions on how to install Mu
 1. Download the file from the [Downloads] (https://github.com/jgpws/jgd-spring-awakening/blob/master/downloads/) directory
 2. Open a Terminal application
 3. Navigate to your Downloads folder in the terminal (usually titled Downloads). Type `cd Downloads`
-4. Type `ls` and look for **JGD-SpringAwakening-month-day-year.tar.gz**, where month, day and year represent when the file was last updated
+4. Type `ls` and look for **JGD-SpringAwakening-month-day-year.tar.gz** (newer versions are all lowercased letters), where month, day and year represent when the file was last updated
 5. Untar the file by typing `tar -zxvf JGD-SpringAwakening-01-01-17.tar.gz`, substituting the current version's date numbers
 6. type `cd` again to get to your home folder; type `ls -a` and see if there is a **.themes** directory
 7. If one does not exist, create one: `mkdir .themes`
@@ -37,10 +37,10 @@ In the **Ubuntu Software Center**, search for **Murrine**. Then you can select *
 
 `sudo pacman -S gtk-engines`
 
-*Note: The GTK+3 theme has been tested so far only in a Gnome version 3.10 environment on Ubuntu LTS 14.04. Because of the nature of GTK theming, it is not guaranteed to render correctly in other versions.
+*Note: The GTK+3 theme has been tested in Gnome version 3.10 environment on Ubuntu LTS 14.04 and version 3.22 on Arch Linux. Because of the nature of GTK theming prior to version 3.20, it is not guaranteed to render correctly in versions below 3.20.
 
 To switch themes, you can use your desktop environment's theme switcher.
 
 Enjoy!
 
-I'm now currently using Arch Linux as my new operating system. In the future, for this theme, I will create an AUR package for auto install (as soon as I learn how to do so and after this theme has been updated for gtk 3.20+).
+An AUR package for Arch Linux is coming soon!
