@@ -10,7 +10,7 @@ The GTK+2 version requires the Murrine engine. Instructions on how to install Mu
 
 ## How to install this theme collection:
 
-1. Download the file from the [Downloads](https://github.com/jgpws/jgd-spring-awakening/blob/master/downloads/) directory
+1. Download the latest file from the [Downloads](https://github.com/jgpws/jgd-spring-awakening/blob/master/downloads/) directory
 2. Open a Terminal application
 3. Navigate to your Downloads folder in the terminal (usually titled Downloads). Type `cd Downloads`
 4. Type `ls` and look for **JGD-SpringAwakening-month-day-year.tar.gz** (newer versions are all lowercased letters), where month, day and year represent when the file was last updated
