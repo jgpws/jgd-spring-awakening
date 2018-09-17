@@ -1,8 +1,8 @@
-/* Widgets */
+e/* Widgets */
 * {
 	background-clip: padding-box;
 	font-size: 14px;
-	-gtk-icon-style: regular; /* Use standard GTK+ icons */
+	-gtk-icon-style: requested;
 	-gtk-outline-radius: 6px;
 	outline-color: @primary_color;
 	outline-style: solid;
