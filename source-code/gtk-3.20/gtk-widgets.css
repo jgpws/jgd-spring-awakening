@@ -87,7 +87,7 @@ switch:disabled {
 
 label:disabled,
 notebook label:disabled,
-scrolledwindow:disabled {
+scrolledwindow label:disabled {
 	color: @button_disabled_fg_color;
 }
 
@@ -129,14 +129,14 @@ scrollbar.vertical slider {
 	);
 }
 
-notebook label,
+notebook header label,
 menubar label,
 treeview header label {
 	font-family: "DejaVu Serif Condensed", serif;
 	font-weight: bold;
 }
 
-notebook label,
+notebook header label,
 treeview header label {
 	color: @theme_text_color;
 }
@@ -360,6 +360,10 @@ button.destructive-action,
 button.destructive-action:focus { /* Record buttons/etc. */
 	background-color: @error_color;
 	color: @theme_selected_fg_color;
+}
+
+button.appmenu image {
+	color: @theme_text_color;
 }
 
 notebook .vertical combobox {
@@ -761,6 +765,7 @@ tabs arrow:disabled {
 /* Menus and Toolbars */
 menubar {
 	padding: 3px;
+	color: @theme_fg_color;
 }
 
 menubar > menuitem {
@@ -780,12 +785,15 @@ menuitem label {
 }
 
 menuitem:hover,
-menu menuitem:hover {
+menu menuitem:hover,
+scrolledwindow menuitem:hover,
+scrolledwindow menu menuitem:hover {
 	background-color: @theme_selected_bg_color;
 	color: @theme_selected_fg_color;
 }
 
-menu {
+menu,
+scrolledwindow menu {
 	background-color: @theme_base_color;
 	border-style: solid;
 }
@@ -814,7 +822,8 @@ menu menuitem {
 	padding: 3px 6px;
 }
 
-menu menuitem label {
+menu menuitem label,
+scrolledwindow menu menuitem label {
 	font-family: "DejaVu Sans Condensed", sans-serif;
 	font-weight: normal;
 }
@@ -858,16 +867,6 @@ menuitem:disabled {
 	-gtk-icon-effect: dim;
 }
 
-scrolledwindow menuitem label ,
-scrolledwindow menuitem:hover menuitem label {
-	color: @theme_fg_color;
-}
-
-scrolledwindow menuitem:hover label,
-scrolledwindow menuitem menuitem:hover label {
-	color: @theme_selected_fg_color;
-}
-
 headerbar {
 	padding: 0px 6px;
 	margin: 0px -2px 0px -2px;
@@ -902,6 +901,12 @@ headerbar {
 headerbar label.title,
 headerbar label.item {
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+}
+
+headerbar button,
+headerbar button.text-button {
+	margin-top: 4px;
+	margin-bottom: 4px;
 }
 
 headerbar button:disabled {
@@ -1169,6 +1174,10 @@ progressbar.vertical progress {
 	min-width: 20px;
 }
 
+entry progress {
+	border-bottom: 2px solid @secondary_color_faded;
+}
+
 scrollbar {
 	border-radius: 0px;
 }
@@ -1228,6 +1237,7 @@ spinner:checked:disabled {
 }
 
 /* Miscellaneous */
+.floating-bar,
 tooltip.background {
 	background-color: @tooltip_bg_color;
 	color: @tooltip_fg_color;
