@@ -208,6 +208,8 @@ headerbar button.titlebutton {
 	background-repeat: no-repeat;
 	color: transparent;
 	border-width: 0;
+	padding-left: 1.5px;
+	padding-right: 1.5px;
 }
 
 headerbar button.titlebutton.close,
