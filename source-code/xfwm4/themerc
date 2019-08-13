@@ -1,0 +1,6 @@
+button_spacing=3
+button_offset=3
+maximized_offset=6
+title_shadow_active=true
+title_shadow_inactive=true
+inactive_text_color=#666634
