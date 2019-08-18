@@ -22,6 +22,7 @@ selection {
 
 /* Shared CSS rules */
 button,
+button.flat:hover,
 calendar,
 entry,
 menu,
@@ -91,6 +92,7 @@ scrolledwindow label:disabled {
 }
 
 button,
+button.flat:hover,
 button.link:hover,
 menubar:active,
 menuitem:hover,
@@ -302,6 +304,7 @@ popover.background {
 
 /* Buttons, Checkboxes, Radio Buttons */
 button,
+button.flat:hover,
 button.combo {
 	background-color: @button_bg_color;
 	color: @theme_text_color;
@@ -330,6 +333,12 @@ spinbutton:focus,
 
 button.text-button.toggle:focus:checked {
 	outline-color: @focus_color_dark;
+}
+
+button.flat {
+	border: 1px solid transparent;
+	background-color: transparent;
+	background-image: none;
 }
 
 button.image-button:disabled,
@@ -1028,39 +1037,30 @@ scale trough:disabled {
 	border-color: @button_disabled_color;
 }
 
-progressbar.horizontal progress {
+progressbar.horizontal progress {						
 	background-image: linear-gradient(to bottom,
-		rgba(0, 0, 0, 0) 0%,
-		rgba(0, 0, 0, 0) 50%,
-		rgba(0, 0, 0, 0.10) 50%,
-		rgba(0, 0, 0, 0.05) 100%),
-							repeating-linear-gradient(135deg,
-		rgba(255, 255, 255, .15) 12px,
-		transparent 12px,
-		transparent 24px,
-		rgba(255, 255, 255, .10) 24px,
-		rgba(255, 255, 255, .10) 36px,
-		transparent 36px,
-		transparent 36px
-	);
+								@pure_black_transparent 0%,
+								@pure_black_transparent 50%,
+								@pure_black_10pcnt 50%,
+								@pure_black_5pcnt 100%),
+	                  repeating-linear-gradient(135deg,
+								@pure_black_transparent 12px,
+								@pure_black_transparent 24px,
+								@pure_white_10pcnt 24px,
+								@pure_white_10pcnt 36px);
 }
 
 progressbar.vertical progress {
-	background-image: linear-gradient(
-		to right,
-		rgba(0, 0, 0, 0) 0%,
-		rgba(0, 0, 0, 0) 50%,
-		rgba(0, 0, 0, 0.10) 50%,
-		rgba(0, 0, 0, 0.05) 100%),
+	background-image: linear-gradient(to right,
+								@pure_black_transparent 0%,
+								@pure_black_transparent 50%,
+								@pure_black_10pcnt 50%,
+								@pure_black_5pcnt 100%),
 							repeating-linear-gradient(45deg,
-		rgba(255, 255, 255, .15) 12px,
-		transparent 12px,
-		transparent 24px,
-		rgba(255, 255, 255, .10) 24px,
-		rgba(255, 255, 255, .10) 36px,
-		transparent 36px,
-		transparent 36px
-	);
+								@pure_black_transparent 12px,
+								@pure_black_transparent 24px,
+								@pure_white_10pcnt 24px,
+								@pure_white_10pcnt 36px);
 }
 
 progressbar.vertical text {
