@@ -1256,8 +1256,12 @@ expander arrow:checked {
 	-gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
 }
 
-revealer frame {
+revealer frame,
+revealer list {
 	background-color: @tooltip_bg_color;
+}
+
+revealer frame {
 	border-radius: 6px;
 	padding: 6px;
 }
@@ -1265,7 +1269,14 @@ revealer frame {
 overlay revealer label {
 	color: @tooltip_fg_color;
 	padding: 0px 6px;
-	
+}
+
+overlay revealer row:hover label {
+	color: @theme_text_color;
+}
+
+overlay revealer row:selected:hover label {
+	color: @tooltip_fg_color;
 }
 
 statusbar label {
