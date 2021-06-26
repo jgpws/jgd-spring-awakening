@@ -31,9 +31,9 @@ If you prefer using a GUI for these purposes, as it is easier, do so. To install
 
 ### To Install on Arch Linux
 
-JGD-Spring Awakening can be installed from the Arch User Repository via a package helper, such as [Yaourt](https://archlinux.fr/yaourt-en):
+JGD-Spring Awakening can be installed from the Arch User Repository via a package helper, such as [Yay](https://github.com/Jguer/yay):
 
-```yaourt -S jgd-springawakening```
+```yay -S jgd-springawakening```
 
 ## How to Install Murrine for GTK+2:
 
