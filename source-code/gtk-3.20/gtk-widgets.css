@@ -15,13 +15,9 @@ selection {
 	color: @theme_selected_fg_color;
 }
 
-.background,
-widget {
-	background-color: @theme_bg_color;
-}
-
 .background {
-	color: @theme_fg_color;
+	background-color: @theme_bg_color;
+	color: @theme_fg_color; 
 }
 
 /* Shared CSS rules */
