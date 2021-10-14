@@ -1292,3 +1292,8 @@ flowbox rubberband,
 	border: 1px solid @theme_selected_bg_color;
 	background-color: rgba(34, 139, 34, 0.25);
 }
+
+/* Fixes for rendering issues in some programs */
+window > box > widget > widget { /* Widgets inside of widgets */
+	background-color: @theme_bg_color;
+}
